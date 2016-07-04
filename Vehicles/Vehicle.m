@@ -10,4 +10,42 @@
 
 @implementation Vehicle
 
+-(NSString *)goForward
+{
+    return nil;
+}
+
+-(NSString *)goBackward
+{
+    return nil;
+}
+
+-(NSString *)stopMoving
+{
+    return nil;
+}
+
+-(NSString *)changeGears:(NSString *)newGearName
+{
+    return [NSString stringWithFormat: @"Put %@ into %@ gear",self.modelName, newGearName];
+
+}
+
+-(NSString *)turn: (int)degrees
+{
+    int degreesInACircle = 360;
+    if (degrees >degreesInACircle || degrees < -degreesInACircle){
+        degrees = degrees %degreesInACircle;
+    }
+    return [NSString stringWithFormat: @"Turn %d degrees.",degrees];
+}
+
+-(NSString *)makeNoise
+{
+    return nil;
+}
+
+
+
+
 @end
